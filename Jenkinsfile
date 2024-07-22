@@ -4,6 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh 'npm install' 
+                sh 'composer install'
             }
         }
         stage('OWASP Dependency-Check Vulnerabilities') {
